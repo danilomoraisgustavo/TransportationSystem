@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <title>SGCTA</title>
+</head>
+
+<body>
+    <header>
+        <img src="" alt="Logo" class="logo">
+        <ul class="nav flex-column side-menu">
+            <li class="nav-item">
+                <a class="nav-link active" data-target="#dashboard-section" href="#">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-target="#abastecimento-section" href="#">Abastecimento</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-target="#cadastro-section" href="#">Cadastro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-target="#tarefas-section" href="#">Tarefas</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <div id="notification"
+            style="display: none; position: fixed; top: 10px; right: 10px; padding: 10px; z-index: 1000;"></div>
+        <section class="dashboard" id="dashboard-section">
+            <h1>Dashboard</h1>
+            <p>Aqui vai o conteúdo da seção de Dashboard</p>
+        </section>
+        <section class="abastecimento" id="abastecimento-section">
+            <h1>Abastecimento</h1>
+            <form id="form-abastecimento">
+                <div class="mb-3">
+                    <label for="numeroRequisicao" class="form-label">Número de Requisição</label>
+                    <input type="text" class="form-control" id="numeroRequisicao" name="numeroRequisicao" required>
+                </div>
+                <div class="mb-3">
+                    <label for="nomeMotorista" class="form-label">Nome do Motorista</label>
+                    <input type="text" class="form-control" id="nomeMotorista" name="nomeMotorista" required>
+                </div>
+                <div class="mb-3">
+                    <label for="modeloCarro" class="form-label">Modelo do Carro</label>
+                    <input type="text" class="form-control" id="modeloCarro" name="modeloCarro" required>
+                </div>
+                <div class="mb-3">
+                    <label for="placaCarro" class="form-label">Placa do Carro</label>
+                    <input type="text" class="form-control" id="placaCarro" name="placaCarro" required>
+                </div>
+                <div class="mb-3">
+                    <label for="combustivel" class="form-label">Combustível</label>
+                    <select class="form-select" id="combustivel" name="combustivel" required>
+                        <option value="">Selecione</option>
+                        <option value="diesel">Diesel</option>
+                        <option value="gasolina">Gasolina</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="quantidadeAbastecida" class="form-label">Quantidade Abastecida (litros)</label>
+                    <input type="number" class="form-control" id="quantidadeAbastecida" name="quantidadeAbastecida"
+                        step="0.001" required>
+                </div>
+                <div class="mb-3">
+                    <label for="valorTotal" class="form-label">Valor Total (R$)</label>
+                    <input type="number" step="0.01" class="form-control" id="valorTotal" name="valorTotal" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+
+                <input type="text" id="searchField" placeholder="Pesquisar requisições...">
+                <button onclick="searchRequisitions()">Pesquisar</button>
+
+                <table id="requisitionsTable">
+                    <thead>
+                        <tr>
+                            <th>Número da Requisição</th>
+                            <th>Nome do Motorista</th>
+                            <th>Modelo do Carro</th>
+                            <th>Placa do Carro</th>
+                            <th>Combustível</th>
+                            <th>Quantidade Abastecida</th>
+                            <th>Valor Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Os dados das requisições serão inseridos aqui -->
+                    </tbody>
+                </table>
+            </form>
+            
+        </section>
+        <section class="cadastro" id="cadastro-section">
+            <h1>Cadastro</h1>
+            <p>Aqui vai o conteúdo da seção de Cadastro</p>
+        </section>
+        <section class="tarefas" id="tarefas-section">
+            <h1>Tarefas</h1>
+            <p>Aqui vai o conteúdo da seção de Tarefas</p>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

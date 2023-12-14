@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Transporte Administrativo</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="" width="30" height="30" alt="Logo">
+        </a>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarTop">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Quem Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nossa Empresa</a>
+                </li>
+            </ul>
+        </div>
+        <form class="form-inline ml-auto">
+            <a href="login.html" class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-user-plus"></i>
+                Login/Cadastro</a>
+        </form>
+    </nav>
+    <span class="menu-btn" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </span>
+    <div class="sidebar" id="sidebar">
+
+        <a href="index.html"><i class="fas fa-home"></i> Início</a>
+        <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login/Cadastro</a>
+    </div>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            var menuBtn = document.querySelector(".menu-btn");
+            sidebar.classList.toggle("open");
+            menuBtn.classList.toggle("open");
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
