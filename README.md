@@ -77,5 +77,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Contact
 
-Your Name - [@your_twitter_handle](https://twitter.com/your_twitter_handle)
-Project Link: [https://github.com/your-username/your-project-name](https://github.com/your-username/your-project-name)
+Danilo de Morais - [@your_twitter_handle](https://danilomorais.netlify.app/)
+Project Link: [https://github.com/your-username/your-project-name](https://github.com/danilomoraisgustavo/TransportationSystem)
